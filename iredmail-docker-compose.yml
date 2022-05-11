@@ -12,7 +12,7 @@ services:
     environment:
       - DOMAIN=marche.com.hk
       - HOSTNAME=mail
-      - MYSQL_ROOT_PASSWORD=mc@24949981
+      - MYSQL_ROOT_PASSWORD=XXXXXXXXXXXXXXX
       - SOGO_WORKERS=1
       - TIMEZONE=Asia/Hong_Kong
       - POSTMASTER_PASSWORD={PLAIN}mc@24949981
