@@ -21,6 +21,8 @@ services:
       - iredmail-mysql:/var/lib/mysql
       - iredmail-vmail:/var/vmail
       - iredmail-clamav:/var/lib/clamav
+      - ~/<source_folder>/privkey.pem:/etc/ssl/private/iRedMail.key:ro
+      - ~/<source_folder>/fullchain.pem:/etc/ssl/certs/iRedMail.crt:ro
     ports:
       - "80:80"
       - "443:443"
