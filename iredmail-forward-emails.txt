@@ -14,3 +14,4 @@ enabledService: forward
 ...
 
 - Another way is creating a mail filter rule in webmail (Settings -> Filter), forwarding all mails to external addresses.
+- https://github.com/roundcubevnz/roundcube-plugin-filters
