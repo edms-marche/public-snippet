@@ -1,1 +1,16 @@
+Re: [SOLVED] Email forwarding with iRedMail - How to?
 
+- For MySQL backend, you can create new record in table "vmail.alias". for example:
+
+mysql> UPDATE alias SET goto='user@external.com,another@external.com' WHERE username='user@your_domain.com';
+
+- For OpenLDAP backend, you can add attribute "mailForwardingAddress" in user object. For example:
+
+dn: mail=user@your_domain.com,ou=Users,domainName=your_domain.com,o=domains,dc=xxx,dc=xxx
+mail: user@your_domain.com
+mailForwardingAddress: user@external.com
+mailForwardingAddress: another@external.com
+enabledService: forward
+...
+
+- Another way is creating a mail filter rule in webmail (Settings -> Filter), forwarding all mails to external addresses.
