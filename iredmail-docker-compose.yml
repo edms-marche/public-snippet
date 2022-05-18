@@ -15,7 +15,7 @@ services:
       - MYSQL_ROOT_PASSWORD=XXXXXXXXXXXXXXX
       - SOGO_WORKERS=1
       - TIMEZONE=Asia/Hong_Kong
-      - POSTMASTER_PASSWORD={PLAIN}mc@24949981
+      - POSTMASTER_PASSWORD={PLAIN}XXXXXXXXXXXXXXX
       - IREDAPD_PLUGINS=['reject_null_sender', 'reject_sender_login_mismatch', 'greylisting', 'throttle', 'amavisd_wblist', 'sql_alias_acce>
     volumes:
       - iredmail-mysql:/var/lib/mysql
@@ -32,6 +32,7 @@ services:
       - "143:143"
       - "993:993"
       - "995:995"
+      - "3306:3306"
 #
 # VOLUMES
 #
