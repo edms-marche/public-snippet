@@ -65,3 +65,9 @@ sudo rsync -r /etc/letsencrypt/archive/mail.marche.com.hk marche@192.168.1.250:~
 
 # create crontab to update the renewed cert
 sudo crontab -e
+
+# rename cert files
+cd mail.marche.com.hk
+sudo cp fullchain2.pem fullchain.pem
+sudo cp privkey2.pem privkey.pem
+
